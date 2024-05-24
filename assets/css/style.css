@@ -25,7 +25,7 @@
   --yellow-green: hsl(89, 72%, 45%);
   --orange-soda: hsl(0, 0%, 0%);
   --cultured-1: hsl(0, 0%, 93%);
-  --cultured-2: hsl(192, 24%, 96%);
+  --cultured-2: hsl(185, 35%, 94%);
   --misty-rose: hsl(7, 56%, 91%);
   --alice-blue: hsl(210, 100%, 97%);
   --seashell: hsl(8, 100%, 97%);
@@ -203,9 +203,7 @@ button, a { transition: var(--transition); }
 .btn:is(:hover, :focus)::before { width: 100%; }
 
 .w-100 { width: 100%; padding-left: 20px; border-radius: 10px;}
-.hero-banner.w-100{
-  width: 700px;
-}
+
 .section-subtitle {
   color: var(--orange-soda);
   font-size: 30px;
@@ -456,9 +454,18 @@ max-width: 100px; max-height: 70px; }
 .hero {
   background-color: var(--cultured-2);
   padding-block: var(--section-padding);
-  background-repeat: no-repeat;
-  background-size: cover;
-  image-resolution:inherit;
+  min-height: 90vh ;
+  display: grid;
+}
+
+.hero .w-100{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hero .container{
+ 
+  align-content: center;
 }
 
 .hero-content { margin-bottom: 60px; }
@@ -469,6 +476,10 @@ max-width: 100px; max-height: 70px; }
   align-items: center;
   gap: 5px;
   margin-bottom: 20px;
+}
+
+.hero-title span{
+  color: var(--cadet);
 }
 
 .hero-subtitle ion-icon { color: var(--orange-soda); }
@@ -508,6 +519,7 @@ max-width: 100px; max-height: 70px; }
 .about-banner {
   position: relative;
   margin-bottom: 40px;
+  
 }
 
 .about-banner > img {
