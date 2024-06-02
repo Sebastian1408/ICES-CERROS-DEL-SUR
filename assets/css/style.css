@@ -239,7 +239,7 @@ a {
   font-weight: var(--fw-600);
   padding: 5px 20px;
   background: hsla(220, 96%, 44%, 0.083);
-  width: max-content;
+  width:fit-content;
   border-radius: 50px;
   margin-inline: auto;
   margin-bottom: 15px;
@@ -1390,9 +1390,13 @@ a {
    */
 
   .cta-card {
+    
     --fs-2: 1.5rem;
   }
 
+  .cta-card .d-flex{
+    grid-auto-flow: column;
+  }
 
 
   /**
@@ -1404,6 +1408,8 @@ a {
     justify-content: space-between;
     gap: 20px;
   }
+
+  
 
 }
 
@@ -2040,7 +2046,9 @@ a {
 }
 
 .d-flex {
-  display: flex;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 10px;
 }
 
 .card1:hover .instagram {
